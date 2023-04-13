@@ -11,11 +11,12 @@ class Vect2:
         self.x /= n
         self.y /= n
         return self
+
     def __repr__(self):
         return f"({self.x}, {self.y})"
 
-    def __mult__(self, other):
-        if isinstance(other, int):
+    def __mul__(self, other):
+        if isinstance(other, int) or isinstance(other, float):
             self.x *= other
             self.y *= other
             return self
